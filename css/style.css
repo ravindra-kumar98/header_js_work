@@ -1,0 +1,141 @@
+.get_btn,
+.reset_btn,
+.save_btn {
+    display: inline-block;
+    text-align: center;
+    padding: 3px 20px;
+    font-size: 12px;
+    transition: 0.3s;
+    font-weight: 600;
+}
+.get_btn,
+.reset_btn,
+.save_btn,
+body {
+    font-size: 12px;
+}
+*,
+.from_table .inner_table,
+ul {
+    margin: 0;
+    padding: 0;
+}
+.get_btn,
+.reset_btn,
+.save_btn {
+    transition: 0.3s;
+}
+.form-check-label,
+.get_btn,
+.reset_btn,
+.save_btn {
+    font-weight: 600;
+}
+* {
+    box-sizing: border-box;
+}
+:focus-visible {
+    outline: 0;
+}
+body {
+    line-height: 1.4;
+    color: #000;
+}
+a {
+    text-decoration: none;
+}
+ul {
+    list-style: none;
+}
+.form-check-input:focus,
+.form-select:focus {
+    border-color: rgba(0, 0, 0, 0.25);
+    outline: 0;
+    box-shadow: none;
+}
+.save_btn {
+    background-color: #000;
+    color: #fff;
+    border-radius: 3px;
+    border: 1px solid #000;
+}
+.get_btn:hover,
+.save_btn:hover {
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #000;
+}
+.reset_btn {
+    border-radius: 3px;
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #000;
+}
+.get_btn,
+.reset_btn:hover {
+    background-color: #000;
+    color: #fff;
+}
+.reset_btn:hover {
+    border: 1px solid #000;
+}
+.get_btn {
+    width: 100px;
+    border-radius: 3px;
+    border: 1px solid #000;
+}
+.from_table .main_table {
+    padding: 0;
+    margin: 0;
+    table-layout: fixed;
+}
+.from_table .main_table td,
+.from_table .main_table th {
+    border: 0;
+    padding: 0;
+    height: 30px;
+    vertical-align: middle;
+}
+.from_table .inner_table tr td,
+.from_table .inner_table tr th {
+    padding: 2px 15px;
+    border-bottom: 0;
+}
+.from_table .inner_table tr th {
+    width: 25%;
+    padding-right: 40px;
+    position: relative;
+}
+.from_table .inner_table tr th:hover .edit_icon {
+    display: block;
+}
+.from_table .inner_table tr th .edit_icon {
+    display: none;
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    padding: 5px;
+    background-color: #fff;
+    transform: translateY(-50%);
+    cursor: pointer;
+    transition: 0.3s;
+}
+.from_table .inner_table tr th .edit_icon:hover {
+    color: green;
+}
+.from_table .inner_table tr th .editable-input {
+    width: 90px;
+    font-weight: 600;
+}
+.from_table .inner_table tr td {
+    width: 75%;
+}
+.from_table .form-select {
+    width: 100%;
+    height: 25px;
+    border: 1px solid #c6c6c6;
+    border-radius: 0;
+    opacity: 1;
+    font-size: 13px;
+    padding: 0 10px;
+}

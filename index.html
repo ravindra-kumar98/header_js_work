@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRM Dashboard</title>
+    <link rel="stylesheet" href="./css/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<style>
+    /* Add a CSS style to prevent text wrapping in th and td */
+    .inner_table th,
+    .inner_table td {
+        white-space: nowrap;
+    }
+</style>
+
+<body>
+    <section class="py-4">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-2">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked1">
+                        <label class="form-check-label" for="flexCheckChecked1">
+                            Add box border
+                        </label>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked2">
+                        <label class="form-check-label" for="flexCheckChecked2">
+                            Add horizontal border
+                        </label>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked3">
+                        <label class="form-check-label" for="flexCheckChecked3">
+                            Add verticel border
+                        </label>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"
+                            checked>
+                        <label class="form-check-label" for="flexRadioDefault1">
+                            Solid
+                        </label>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                        <label class="form-check-label" for="flexRadioDefault2">
+                            Dashed
+                        </label>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <a href="#!" class="save_btn mb-2" onclick="generatePDF()">Save</a>
+                    <a href="#!" class="reset_btn mb-2 ms-2">Reset</a>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid" id="draggableContainer">
+            <div class="from_table table-responsive" id="appendTable">
+                <table class="table main_table" id="dTable">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <table class="table inner_table">
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row"><span class="edit_icon"><i
+                                                        class="fas fa-pencil-alt"></i></span><label>Patient Name</label>
+                                            </th>
+                                            <td class="td_value">
+                                                <div class="form__input">
+                                                    <select class="form-select">
+                                                        <option>Enter Field</option>
+                                                        <option>Patient Name</option>
+                                                        <option selected>Age/Gender</option>
+                                                        <option>Referred By</option>
+                                                        <option>Bed No/Ward</option>
+                                                        <option>Ack Date</option>
+                                                        <option>UHID</option>
+                                                        <option>Request Date</option>
+                                                        <option>Report Date</option>
+                                                    </select>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row"><span class="edit_icon"><i
+                                                        class="fas fa-pencil-alt"></i></span><label>Age/Gender</label>
+                                            </th>
+                                            <td class="td_value">
+                                                <div class="form__input">
+                                                    <select class="form-select">
+                                                        <option selected>Enter Field</option>
+                                                        <option>Patient Name</option>
+                                                        <option>Age/Gender</option>
+                                                        <option>Referred By</option>
+                                                        <option>Bed No/Ward</option>
+                                                        <option>Ack Date</option>
+                                                        <option>UHID</option>
+                                                        <option>Request Date</option>
+                                                        <option>Report Date</option>
+                                                    </select>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row"><span class="edit_icon"><i
+                                                        class="fas fa-pencil-alt"></i></span><label>Referred By</label>
+                                            </th>
+                                            <td class="td_value">
+                                                <div class="form__input">
+                                                    <select class="form-select">
+                                                        <option selected>Enter Field</option>
+                                                        <option>Patient Name</option>
+                                                        <option>Age/Gender</option>
+                                                        <option>Referred By</option>
+                                                        <option>Bed No/Ward</option>
+                                                        <option>Ack Date</option>
+                                                        <option>UHID</option>
+                                                        <option>Request Date</option>
+                                                        <option>Report Date</option>
+                                                    </select>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row"><span class="edit_icon"><i
+                                                        class="fas fa-pencil-alt"></i></span><label>Bed No/Ward</label>
+                                            </th>
+                                            <td class="td_value">
+                                                <div class="form__input">
+                                                    <select class="form-select">
+                                                        <option selected>Enter Field</option>
+                                                        <option>Patient Name</option>
+                                                        <option>Age/Gender</option>
+                                                        <option>Referred By</option>
+                                                        <option>Bed No/Ward</option>
+                                                        <option>Ack Date</option>
+                                                        <option>UHID</option>
+                                                        <option>Request Date</option>
+                                                        <option>Report Date</option>
+                                                    </select>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row"><span class="edit_icon"><i
+                                                        class="fas fa-pencil-alt"></i></span><label>Ack Date</label>
+                                            </th>
+                                            <td class="td_value">
+                                                <div class="form__input">
+                                                    <select class="form-select">
+                                                        <option selected>Enter Field</option>
+                                                        <option>Patient Name</option>
+                                                        <option>Age/Gender</option>
+                                                        <option>Referred By</option>
+                                                        <option>Bed No/Ward</option>
+                                                        <option>Ack Date</option>
+                                                        <option>UHID</option>
+                                                        <option>Request Date</option>
+                                                        <option>Report Date</option>
+                                                    </select>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                            <td>
+                                <table class="table inner_table">
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">&nbsp;</th>
+                                            <td>&nbsp;</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row"><span class="edit_icon"><i
+                                                        class="fas fa-pencil-alt"></i></span><label>UHID</label></th>
+                                            <td class="td_value">
+                                                <div class="form__input">
+                                                    <select class="form-select">
+                                                        <option selected>Enter Field</option>
+                                                        <option>Patient Name</option>
+                                                        <option>Age/Gender</option>
+                                                        <option>Referred By</option>
+                                                        <option>Bed No/Ward</option>
+                                                        <option>Ack Date</option>
+                                                        <option>UHID</option>
+                                                        <option>Request Date</option>
+                                                        <option>Report Date</option>
+                                                    </select>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">&nbsp;</th>
+                                            <td>&nbsp;</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row"><span class="edit_icon"><i
+                                                        class="fas fa-pencil-alt"></i></span><label>Request Date</label>
+                                            </th>
+                                            <td class="td_value">
+                                                <div class="form__input">
+                                                    <select class="form-select">
+                                                        <option selected>Enter Field</option>
+                                                        <option>Patient Name</option>
+                                                        <option>Age/Gender</option>
+                                                        <option>Referred By</option>
+                                                        <option>Bed No/Ward</option>
+                                                        <option>Ack Date</option>
+                                                        <option>UHID</option>
+                                                        <option>Request Date</option>
+                                                        <option>Report Date</option>
+                                                    </select>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row"><span class="edit_icon"><i
+                                                        class="fas fa-pencil-alt"></i></span><label>Report Date</label>
+                                            </th>
+                                            <td class="td_value">
+                                                <div class="form__input">
+                                                    <select class="form-select">
+                                                        <option selected>Enter Field</option>
+                                                        <option>Patient Name</option>
+                                                        <option>Age/Gender</option>
+                                                        <option>Referred By</option>
+                                                        <option>Bed No/Ward</option>
+                                                        <option>Ack Date</option>
+                                                        <option>UHID</option>
+                                                        <option>Request Date</option>
+                                                        <option>Report Date</option>
+                                                    </select>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 text-center"><a href="#!" class="get_btn mt-5">Get</a></div>
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="container-fluid">
+            <div class="from_table table-responsive" id="getTable"></div>
+        </div>
+    </section>
+
+    <script src="./js/jQuery-v3.min.js"></script>
+    <script src="./js/popper.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/all.js"></script>
+    <!-- Using a CDN link -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            let e = "",
+                d = !1;
+            function t() {
+                $("#flexCheckChecked1").is(":checked") ? $("#appendTable .main_table").css({ "border-width": "1px", "border-style": e, "border-color": "#d4d4d4" }) : $("#appendTable .main_table").css("border", "0"),
+                    $("#flexCheckChecked2").is(":checked")
+                        ? ($("#appendTable .inner_table tr").css({ "border-bottom-width": "1px", "border-style": e, "border-color": "#d4d4d4" }), $("#appendTable .inner_table tr:last-child").css("border-bottom", "0"))
+                        : $("#appendTable .inner_table tr").css("border-bottom", "0"),
+                    $("#flexCheckChecked3").is(":checked")
+                        ? ($("#appendTable .main_table td:first-child").css({ "border-right-width": "1px", "border-style": e, "border-color": "#d4d4d4" }),
+                            $("#appendTable .inner_table th").css({ "border-right-width": "1px", "border-style": e, "border-color": "#d4d4d4" }))
+                        : ($("#appendTable .main_table td:first-child").css("border-right", "0"), $("#appendTable .inner_table th").css("border-right", "0"));
+            }
+            $('input[name="flexRadioDefault"]').on("change", function () {
+                "flexRadioDefault1" === $(this).attr("id") ? (e = "solid") : "flexRadioDefault2" === $(this).attr("id") && (e = "dashed"), t();
+            }),
+                $("#flexCheckChecked1").on("change", function () {
+                    t();
+                }),
+                $("#flexCheckChecked2").on("change", function () {
+                    t();
+                }),
+                $("#flexCheckChecked3").on("change", function () {
+                    t();
+                }),
+                $('input[name="flexRadioDefault"]:checked').trigger("change"),
+                $("#flexCheckChecked1").trigger("change"),
+                $("#flexCheckChecked2").trigger("change"),
+                $("#flexCheckChecked3").trigger("change"),
+                $(".get_btn").on("click", function () {
+                    if (!d) {
+                        let e = $("#appendTable").html();
+                        $("#getTable").append(e), (d = !0);
+                        let e2 = $("#getTable .edit_icon"),
+                            e3 = $("#getTable .form__input"),
+                            e4 = $("#getTable .inner_table td.td_value");
+                        for (let i = 0; i < e2.length, i < e3.length; i++) {
+                            e2.remove();
+                            e3.remove();
+                        }
+                        let e5Values = $('.form-select').map(function () {
+                            return $(this).val();
+                        }).get();
+                        e4.each(function (i) {
+                            let e5 = e5Values[i];
+                            $(this).append(`<span>$${e5}$</span>`);
+                        });
+                    }
+                });
+            $('.reset_btn').on("click", function () {
+                if (d) {
+                    $("#getTable").empty();
+                    d = !1;
+                }
+            });
+        });
+    </script>
+
+    <script>
+        function generatePDF() {
+            const element = document.getElementById("getTable"); // You can replace 'document.body' with a specific element selector if needed.
+            // Set the PDF options (optional)
+            const pdfOptions = {
+                margin: 5,
+                filename: 'your_filename.pdf',
+                image: { type: 'jpeg', quality: 0.98 }, // For capturing images (if needed)
+                html2canvas: { scale: 2 }, // Resolution for 'html2canvas' (if needed)
+                jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }, // PDF document settings
+            };
+
+            // Generate the PDF and open it in a new tab
+            html2pdf().from(element).set(pdfOptions).output('dataurlnewwindow');
+        }
+    </script>
+
+</body>
+
+</html>
